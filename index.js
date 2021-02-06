@@ -7,8 +7,8 @@ const promptUser = () => {
     return inquirer.prompt([
       {
           type: 'input',
-          name: 'name',
-          message: 'What is your name (Required)',
+          name: 'project-title',
+          message: 'What is the title of your project? (Required)',
           validate: nameInput => {
               if (nameInput) {
                   return true
@@ -20,8 +20,8 @@ const promptUser = () => {
       },
       {
           type: 'input',
-          name: 'github',
-          message: 'Enter your GitHub Username (Required)',
+          name: 'project-description',
+          message: 'Please give a brief description of your project (Required)',
           validate: userNameInput => {
               if (userNameInput) {
                   return true
@@ -30,6 +30,44 @@ const promptUser = () => {
               }
           }
       },
+      {
+          type: 'input',
+          name: 'installation',
+          message: 'Please give installation instructions for your project (Required)',
+          validate: instructionInput => {
+              if (instructionInput) {
+                  return true
+              } else {
+                  console.log('Please enter your instructions')
+              }
+          }
+      },
+      {
+        type: 'input',
+        name: 'contribution-guidelines',
+        message: 'Please give installation instructions for your project (Required)',
+        validate: instructionInput => {
+            if (instructionInput) {
+                return true
+            } else {
+                console.log('Please enter your instructions')
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'test-instructions',
+        message: 'Please give installation instructions for your project (Required)',
+        validate: instructionInput => {
+            if (instructionInput) {
+                return true
+            } else {
+                console.log('Please enter your instructions')
+            }
+        }
+    },
+
+        
       {
           type: 'confirm',
           name: 'confirmAbout',
