@@ -1,32 +1,30 @@
 
-   # a;ldkfja;
-   
- The following licenses are needed: Apache,MIT,Mozilla_Public
+   # Very cool project
+   The following licenses are needed: Apache, Mozilla_Public
 
    ## Table of Contents
-   - Description
-   - Installation
-   - Usage
-   - Contributing
-   - Tests
-   - License
-   - Questions
+   1. [Description](#Project-Description)
+   1. [Installation](#Installation-instructions)
+   1. [Usage](#Usage-Information)
+   1. [Contributing](#Contribution-Guidelines)
+   1. [Tests](#Tests)
+   1. [License](#License-info)
+   1. [Questions](#Questions)
 
    ## Project Description
-   - ;alsdkfja;lksj
+   - the coolest
    ## Installation instructions:
-   a;lasdkjf;alkj
+   npm install
    ## Usage Information
-   la;skdfj;al
+   use quietly
    ## Contribution Guidelines
-   ;laksldf;jal;kj
+   contribute loudly
    ## Tests
-   ;laksdfj;lakj
+   npm test
    ## License-info
-   
- The following licenses are needed: Apache,MIT,Mozilla_Public
+   The following licenses are needed: Apache, Mozilla_Public
    ## Questions
-   If you have any questions, feel free to reach me at ecastro82@gmail.com or via my Github profile on mambru82
+   If you have any questions, feel free to reach me at ecastro82@gmail.com or via my [Github](https://github.com/mambru82) profile 
   
    ### 2021 by mambru82
      

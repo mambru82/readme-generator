@@ -1,9 +1,14 @@
 //create the about section
 const generateLicense = licenseArr=> {
- const licensePrompt = licenseArr.map((x) => {return `${x}`})
- return `
- The following licenses are needed: ${licensePrompt.join(',')}`
+ const licensePrompt = licenseArr.map((x) => `${x}`)
+ return `The following licenses are needed: ${licensePrompt.join(', ')}`
 }
+
+const generateLicenseIcons = licenseArr=> {
+    const licensePrompt = licenseArr.map((x) => `${x}`)
+    return `The following licenses are needed: ${licensePrompt.join(', ')}`
+   }
+   
 
 // const generateProjects = projectsArr => {
 //     //get array of just featured projects
@@ -68,16 +73,16 @@ module.exports = templateData => {
     const {username, email, title, description, installation, usage, contribution, testing, license} = templateData;
     return `
    # ${title}
-   ${generateLicense(license)}
+   ${generateLicenseIcons(license)}
 
    ## Table of Contents
-   - Description
-   - Installation
-   - Usage
-   - Contributing
-   - Tests
-   - License
-   - Questions
+   1. [Description](#Project-Description)
+   1. [Installation](#Installation-instructions)
+   1. [Usage](#Usage-Information)
+   1. [Contributing](#Contribution-Guidelines)
+   1. [Tests](#Tests)
+   1. [License](#License-info)
+   1. [Questions](#Questions)
 
    ## Project Description
    - ${description}
@@ -92,7 +97,7 @@ module.exports = templateData => {
    ## License-info
    ${generateLicense(license)}
    ## Questions
-   If you have any questions, feel free to reach me at ${email} or via my Github profile on ${username}
+   If you have any questions, feel free to reach me at ${email} or via my [Github](https://github.com/${username}) profile 
   
    ### ${new Date().getFullYear()} by ${username}
      `
