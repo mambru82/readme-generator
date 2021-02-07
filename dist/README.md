@@ -1,6 +1,6 @@
 
-   # Very cool project
-   The following licenses are needed: Apache, Mozilla_Public
+   # El Elegante
+   The following licenses are needed: [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0), [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 
    ## Table of Contents
    1. [Description](#Project-Description)
@@ -12,13 +12,13 @@
    1. [Questions](#Questions)
 
    ## Project Description
-   - the coolest
+   - very cool
    ## Installation instructions:
    npm install
    ## Usage Information
-   use quietly
+   anyone can
    ## Contribution Guidelines
-   contribute loudly
+   anyone can
    ## Tests
    npm test
    ## License-info
