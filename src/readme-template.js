@@ -1,8 +1,6 @@
 //create the about section
 const generateLicense = license => {
-    switch (license) {
-
-    }
+    `The following licenses are needed ${license}`
 }
 
 // const generateProjects = projectsArr => {
@@ -84,7 +82,7 @@ module.exports = templateData => {
    ## Installation instructions:
    ${installation}
    ## Usage Information
-   ${usage-info}
+   ${usage}
    ## Contribution Guidelines
    ${contribution}
    ## Tests
@@ -92,7 +90,7 @@ module.exports = templateData => {
    ## License-info
    ${generateLicense(license)}
    ## Questions
-   If you have any questions, feel free to reach me at ${email} or via my Github profile on ${github}
+   If you have any questions, feel free to reach me at ${email} or via my Github profile on ${username}
   
    ### ${new Date().getFullYear()} by ${username}
      `

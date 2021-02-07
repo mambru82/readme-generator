@@ -3,7 +3,7 @@ const generatePage = require('./src/readme-template.js')
 const writeFile = require('./utils/generate-file.js')
 
 
-const promptUser = projectData => {
+const promptUser = () => {
     return inquirer.prompt([
         {
             type: 'input',
@@ -187,7 +187,14 @@ const promptProject = portfolioData => {
 
 };
 
-promptUser().then(console.log(projectData))
+promptUser()
+    .then(promptUserResponse => {
+        return generatePage(promptUserResponse);
+    })
+    .then(readmePage => {
+        console.log(readmePage);
+        return writeFile(readmePage);
+    })
     // .then(console.log(projectData))
     // .then(portfolioData => {
     //     return generatePage(portfolioData);
