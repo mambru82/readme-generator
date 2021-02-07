@@ -5,16 +5,33 @@ const generateLicenseIcons = licenseArr=> {
             return `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`}
     else if (x==='Mozilla_Public') {
             return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`}
-    else return false;
+    else if (x==='MIT') {
+        return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`}
+    else if (x==='IBM_public') {
+        return `[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)`}
+    else if (x==='Eclipse') {
+        return `[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)`
+    } else return false;
     }) 
-   
- return `${licenseIcon.join(', ')}`
+ return `${licenseIcon.join(' ')}`
 }
 
 const generateLicense = licenseArr=> {
-    const licensePrompt = licenseArr.map((x) => `${x}`)
-    return `The following licenses are needed: ${licensePrompt.join(', ')}`
-   }
+    const licenseLink = licenseArr.map((x) => {
+        if (x==='Apache'){ 
+                return `[${x}](https://opensource.org/licenses/Apache-2.0)`}
+        else if (x==='Mozilla_Public') {
+                return `[${x}](https://opensource.org/licenses/MPL-2.0)`}
+        else if (x==='MIT') {
+            return `[${x}](https://opensource.org/licenses/MIT)`}
+        else if (x==='IBM_public') {
+            return `[${x}](https://opensource.org/licenses/IPL-1.0)`}
+        else if (x==='Eclipse') {
+            return `[${x}](https://opensource.org/licenses/EPL-1.0)`
+        } else return false;
+        }) 
+     return `${licenseLink.join(', ')}`
+  }
    
 
 
@@ -44,7 +61,9 @@ module.exports = templateData => {
    ## Tests
    ${testing}
    ## License-info
-   ${generateLicense(license)}
+   - This product is governed by the following license agreements. 
+   - Follow the appropriate links for further information:
+        - ${generateLicense(license)}
    ## Questions
    If you have any questions, feel free to reach me at ${email} or via my [Github](https://github.com/${username}) profile 
   
