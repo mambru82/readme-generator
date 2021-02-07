@@ -1,32 +1,59 @@
 const inquirer = require('inquirer');
-const generatePage = require('./src/page-template.js')
-const { writeFile, copyFile } = require('./utils/generate-site.js')
+const generatePage = require('./src/readme-template.js')
+const writeFile = require('./utils/generate-file.js')
 
 
-const promptUser = () => {
+const promptUser = projectData => {
     return inquirer.prompt([
+        {
+            type: 'input',
+            name: 'username',
+            message: 'What is your github username?',
+            validate: nameInput => {
+                if(nameInput) {
+                    return true
+                } else {
+                    console.log ('Please enter a username')
+                    return false;
+                }
+            }
+
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your email address?',
+            validate: emailInput => {
+                if(emailInput) {
+                    return true
+                } else {
+                    console.log('Please enter a valid email')
+                    return false
+                }
+            }
+        },
       {
           type: 'input',
-          name: 'project-title',
+          name: 'title',
           message: 'What is the title of your project? (Required)',
           validate: nameInput => {
               if (nameInput) {
                   return true
               } else {
-                  console.log('Please enter your name!');
+                  console.log('Please enter your project title!');
                   return false;
               }
           }
       },
       {
           type: 'input',
-          name: 'project-description',
+          name: 'description',
           message: 'Please give a brief description of your project (Required)',
           validate: userNameInput => {
               if (userNameInput) {
                   return true
               } else {
-                  console.log('Please enter your github username!')
+                  console.log('Please enter a brief description of your project')
               }
           }
       },
@@ -43,9 +70,21 @@ const promptUser = () => {
           }
       },
       {
+          type: 'input',
+          name: 'usage',
+          message: 'Please give a brief description of usage criteria...',
+          validate: usageInput => {
+              if (usageInput) {
+                  return true
+              } else {
+                  console.log('Plesae enter usage criteria')
+              }
+          }
+      },
+      {
         type: 'input',
-        name: 'contribution-guidelines',
-        message: 'Please give installation instructions for your project (Required)',
+        name: 'contribution',
+        message: 'Please give contribution guidelines for your project (Required)',
         validate: instructionInput => {
             if (instructionInput) {
                 return true
@@ -56,8 +95,8 @@ const promptUser = () => {
     },
     {
         type: 'input',
-        name: 'test-instructions',
-        message: 'Please give installation instructions for your project (Required)',
+        name: 'testing',
+        message: 'Please give test instructions for your project (Required)',
         validate: instructionInput => {
             if (instructionInput) {
                 return true
@@ -67,25 +106,13 @@ const promptUser = () => {
         }
     },
 
-        
-      {
-          type: 'confirm',
-          name: 'confirmAbout',
-          message: 'Would you like to enter some additional information about yourself for an "About" section?',
-          default: true
+    {
+        type: 'checkbox',
+        name: 'license',
+        message: 'Please select any and all applicable licenses for this project? (Check all that apply)',
+        choices:['Apache', 'MIT', 'Mozilla_Public', 'IBM_public', 'Eclipse']
     },
-      {
-          type: 'input',
-          name: 'about',
-          message: 'Provide some information about yourself:',
-          when: ({confirmAbout})=> {
-              if(confirmAbout) {
-                  return true;
-              } else {
-                  return false;
-              }
-          }
-      }
+
     ])
 }
 
@@ -125,12 +152,6 @@ const promptProject = portfolioData => {
             }
         },
         {
-            type: 'checkbox',
-            name: 'languages',
-            message: 'What did you build this project with? (Check all that apply)',
-            choices:['Javascript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
-        },
-        {
             type: 'input',
             name: 'link',
             message: 'Enter the GitHub link to your project. (Required)',
@@ -166,21 +187,21 @@ const promptProject = portfolioData => {
 
 };
 
-promptUser()
-    .then(promptProject)
-    .then(portfolioData => {
-        return generatePage(portfolioData);
-    })
-    .then(pageHTML => {
-        return writeFile(pageHTML);
-    })
-    .then(writeFileResponse => {
-        console.log(writeFileResponse);
-        return copyFile();
-    })
-    .then(copyFileResponse => {
-        console.log(copyFileResponse);
-    })
-    .catch(err => {
-        console.log(err);
-    });
+promptUser().then(console.log(projectData))
+    // .then(console.log(projectData))
+    // .then(portfolioData => {
+    //     return generatePage(portfolioData);
+    // })
+    // .then(pageHTML => {
+    //     return writeFile(pageHTML);
+    // })
+    // .then(writeFileResponse => {
+    //     console.log(writeFileResponse);
+    //     return copyFile();
+    // })
+    // .then(copyFileResponse => {
+    //     console.log(copyFileResponse);
+    // })
+    // .catch(err => {
+    //     console.log(err);
+    // });
