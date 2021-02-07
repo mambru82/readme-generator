@@ -1,6 +1,7 @@
 
-   #El Elegante
-   undefined
+   # a;ldkfja;
+   
+ The following licenses are needed: Apache,MIT,Mozilla_Public
 
    ## Table of Contents
    - Description
@@ -12,17 +13,18 @@
    - Questions
 
    ## Project Description
-   -Very cool, very elegant
+   - ;alsdkfja;lksj
    ## Installation instructions:
-   npm install
+   a;lasdkjf;alkj
    ## Usage Information
-   To generate things
+   la;skdfj;al
    ## Contribution Guidelines
-   contribute as needed
+   ;laksldf;jal;kj
    ## Tests
-   npm test
+   ;laksdfj;lakj
    ## License-info
-   undefined
+   
+ The following licenses are needed: Apache,MIT,Mozilla_Public
    ## Questions
    If you have any questions, feel free to reach me at ecastro82@gmail.com or via my Github profile on mambru82
   

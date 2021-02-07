@@ -1,6 +1,8 @@
 //create the about section
-const generateLicense = license => {
-    `The following licenses are needed ${license}`
+const generateLicense = licenseArr=> {
+ const licensePrompt = licenseArr.map((x) => {return `${x}`})
+ return `
+ The following licenses are needed: ${licensePrompt.join(',')}`
 }
 
 // const generateProjects = projectsArr => {
@@ -65,7 +67,7 @@ module.exports = templateData => {
     console.log(templateData);
     const {username, email, title, description, installation, usage, contribution, testing, license} = templateData;
     return `
-   #${title}
+   # ${title}
    ${generateLicense(license)}
 
    ## Table of Contents
@@ -78,7 +80,7 @@ module.exports = templateData => {
    - Questions
 
    ## Project Description
-   -${description}
+   - ${description}
    ## Installation instructions:
    ${installation}
    ## Usage Information
