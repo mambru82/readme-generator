@@ -11,7 +11,7 @@
    1. [Questions](#Questions)
 
    ## Project Description
-   - This is a command line application using node package manager to generate a professional README.md file for a given project. Please click on [this link](1) for an example of the README file generated.
+   - This is a command line application using node package manager to generate a professional README.md file for a given project. Please click on [this link](https://github.com/mambru82/readme-generator/blob/main/dist/README.md) for an example of the README file generated.
 
    ## Installation instructions:
    1. clone the file into your directory 
@@ -37,6 +37,6 @@
    If you have any questions, feel free to reach me at ecastro82@gmail.com or via my [Github](https://github.com/mambru82) profile 
   
    ### 2021 by mambru82
-   [1]: https://github.com/mambru82/readme-generator/blob/main/dist/README.md
+   [1]: 
    [2]: https://github.com/mambru82/readme-generator/blob/main/src/Week9ChallengeDemo.mp4
      
