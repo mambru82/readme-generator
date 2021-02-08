@@ -37,6 +37,6 @@
    If you have any questions, feel free to reach me at ecastro82@gmail.com or via my [Github](https://github.com/mambru82) profile 
   
    ### 2021 by mambru82
-   [1]: ./dist/README.md
-   [2]: ./src/Week9ChallengeDemo.mp4
+   [1]: https://github.com/mambru82/readme-generator/blob/main/dist/README.md
+   [2]: https://github.com/mambru82/readme-generator/blob/main/src/Week9ChallengeDemo.mp4
      
