@@ -19,7 +19,7 @@
    1. install the required dependencies with `npm install` 
    1. run the application with `node index.js`
 
-   - See the [provided video](2)
+   - See the [provided video](https://github.com/mambru82/readme-generator/blob/main/src/Week9ChallengeDemo.mp4)
 
    ## Usage Information
    This application may be used as needed. The code is part of a Bootcamp assignment. No license is required.
@@ -37,6 +37,5 @@
    If you have any questions, feel free to reach me at ecastro82@gmail.com or via my [Github](https://github.com/mambru82) profile 
   
    ### 2021 by mambru82
-   [1]: 
-   [2]: https://github.com/mambru82/readme-generator/blob/main/src/Week9ChallengeDemo.mp4
+   
      
