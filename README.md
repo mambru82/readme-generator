@@ -12,7 +12,7 @@
 
    ## Project Description
    - This is a command line application using node package manager to generate a professional README.md file for a given project. Please click on [this link](1) for an example of the README file generated.
-   
+
    ## Installation instructions:
    1. clone the file into your directory 
    1. change your directory to the root directory of the application (default is /readme-generator)
@@ -29,8 +29,7 @@
      - Node JS, Node package manager
    ## Dependencies
      - Inquirer 
-
-     ### Languages used
+   ### Languages used
      - javascript
      - markdown
 
